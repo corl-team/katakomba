@@ -1,4 +1,4 @@
-import shutil
+import os
 import nle.dataset as nld
 
 from katakomba.utils.roles import Alignment, Race, Role, Sex
@@ -20,7 +20,7 @@ def load_nld_aa_large_dataset(
     if nld.db.exists(db_path):
         # if the db was not properly initialized previously for some reason
         # (i.e., a wrong path and then fixed) we need to delete it and recreate from scratch
-        shutil.rmtree(db_path)
+        os.remove(db_path)
 
     nld.db.create(db_path)
     nld.add_nledata_directory(data_path, "autoascend", db_path)
