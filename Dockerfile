@@ -48,4 +48,5 @@ RUN apt-get update && apt-get install -yq \
 COPY . /workspace/
 
 RUN pip3 install --upgrade pip setuptools wheel
+RUN pip3 install --no-use-pep517 nle
 RUN pip3 install -r requirements.txt
