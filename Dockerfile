@@ -32,8 +32,14 @@ RUN apt-get update && apt-get install -yq \
         curl \
         flex \
         git \
+        autoconf \
+        libtool \
+        pkg-config \
         gpg \
         libbz2-dev \
+        python3-dev \
+        python3-pip \
+        python3-numpy \
         ninja-build \
         software-properties-common \
         wget

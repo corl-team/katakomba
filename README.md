@@ -13,6 +13,11 @@
 For now, Katakomba is not pip installable. However, the installation is easy. 
 We also provide an alternative with the Dockerfile already set up to work (this is the preferred way!).
 ```bash
+# first, install nle dependencies
+apt-get install -y build-essential autoconf libtool pkg-config \
+    python3-dev python3-pip python3-numpy git flex bison libbz2-dev
+
+# next, install katakomba requierements
 git clone https://github.com/corl-team/katakomba.git && cd katakomba
 # see https://github.com/facebookresearch/nle/issues/359
 pip install --no-use-pep517 nle
