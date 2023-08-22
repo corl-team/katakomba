@@ -84,7 +84,7 @@ def main(config: Config):
         metrics.aggregate_median(x),
         metrics.aggregate_iqm(x),
         metrics.aggregate_mean(x),
-        metrics.aggregate_optimality_gap(x)
+        metrics.aggregate_optimality_gap(x, gamma=100.0)
     ])
     aggregate_scores, aggregate_score_cis = rly.get_interval_estimates(
         algorithms_scores, aggregate_func, reps=10000
